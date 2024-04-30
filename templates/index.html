@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <div class="container2" style="box-sizing: border-box;">
+            <h2 style="text-align: center; color:white;">Image Classification</h2>
+            <div class="container1">
+                <form id="upload-file" method="post" enctype="multipart/form-data" style="padding-right:50%; 
+                justify-content:center;">
+                    <label for="imageUpload" class="upload-label">
+                        Choose...
+                    </label>
+                    <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                </form>
+                <div class="image-section" style="display:none;">
+                    <div class="img-preview">
+                        <div id="imagePreview">
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" class="btn-btn-primary-btn-lg " id="btn-predict" style="justify-content: center;">Predict!</button>
+                    </div>
+                </div>
+        
+                <div class="loader" style="display:none;"></div>
+        
+                <h3 id="result">
+                    <span> </span>
+                </h3>
+            </div>
+        </div>
+    
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-norml text-body-emphasis lh-1 mb-3" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:60px">Unlock the potential of your images with accurate predictions</h1>
+        <p class="lead">Image classification strives to teach computers to see and understand images as we do, bridging the gap between human perception and machine interpretation.</p>
+        
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
